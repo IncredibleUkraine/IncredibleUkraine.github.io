@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+*
+{
+	margin: 1px;
+	padding: 0;
+}
+
+#container
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.vyshyvanka
+{
+	height: 300vh;
+	width: 15%;
+	background-image: url('images/вишивка.png');
+	background-repeat: repeat-y;
+	background-size: contain;
+}
+
+h1
+{
+	font-family: "Great Vibes";
+	font-size: 120px;
+	margin-top: 10%;
+}
+
+
+#content{
+	width: 80%;
+	height: 300vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+#ukraine_gerb
+{
+	margin-top: 80px;
+}
+
+h2
+{
+	font-family: "Embed code";
+	color: black;
+	font-size: 20px;
+	padding: 40px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+#map_of_Ukraine
+{
+	margin-top: 50px;
+	height: 550px;
+	width: 935px;
+
+	background-image: url('images/map_of_Ukraine.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.close 
+{
+    color: white;
+    float: right;
+    font-size: 56px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus 
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal
+ {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 100, 128, 0.4);
+    overflow: scroll;
+    font-size: 30px;
+    color: yellow;
+}
+
+
+@keyframes zoom_in{
+	from{
+		transform: scale(0.001, 0.001);
+	}
+	to{
+		transform-origin: 50% 20% -100%;
+		transform: scale(1, 1);
+	}
+
+}
+.modal:target 
+{
+    display: block;
+    animation: zoom_in 1.618s linear;
+}
+
+.modal_content p
+{
+	padding-top: 40px;
+	font-size: 50px;
+}
+
+#Transcarpathia_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 48%;
+	transform: rotate(30deg) translateX(-9px) translateY(-6px);
+	width:125px;
+	height: 60px;	
+}
+
+#LvivRegion_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-35deg) translateX(45px) translateY(-30px);
+	width:140px;
+	height: 75px;
+	border-bottom-right-radius: 30%;
+	border-top-right-radius: 100%;
+	border-top-left-radius: 80%;
+	border-bottom-left-radius: 20%;
+
+}
+
+#Ivano_Frankivsk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(38deg) translateX(30px) translateY(-90px);
+	width:80px;
+	height: 65px;
+	border-radius: 30%;
+	border-top-left-radius: 50%;
+	padding-right: 12px;
+
+}
+
+#Ternopil_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(80deg) translateX(-140px) translateY(-160px);
+	width:80px;
+	height: 65px;
+	border-radius: 30%;
+	border-top-left-radius: 50%;
+	padding-right: 12px;
+
+}
+
+#Chernivtsi_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-15deg) translateX(160px) translateY(-100px);
+	width:140px;
+	height: 30px;
+	border-radius: 30%;
+	border-top-left-radius: 60%;
+	margin-top: 5px;
+	margin-left: 5px;
+
+}
+
+#Khmelnytsk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-75deg) translateX(320px) translateY(100px);
+	width:120px;
+	height: 70px;
+	border-radius: 30%;
+	border-top-left-radius: 60%;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+
+
+#Lutsk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-55deg) translateX(460px) translateY(-245px);
+	width:100px;
+	height: 100px;
+	border-radius: 50%;
+	border-bottom-left-radius: 20%;
+	border-top-right-radius: 80%;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding-top: 10px;
+
+}
+
+#Rivne_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-75deg) translateX(615px) translateY(5px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+
+}
+
+#Zhytomyr_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-75deg) translateX(725px) translateY(75px);
+	width:85px;
+	height: 100px;
+	border-radius: 30%;
+
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+
+}
+
+
+#Vinnytsia_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-55deg) translateX(715px) translateY(-175px);
+	width:85px;
+	height: 100px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+
+}
+
+
+#Kyiv_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-85deg) translateX(915px) translateY(285px);
+	width:85px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+
+}
+
+#Chernihiv_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-85deg) translateX(1100px) translateY(335px);
+	width:100px;
+	height: 100px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+
+#Sumy_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-85deg) translateX(1210px) translateY(465px);
+	width:75px;
+	height: 95px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Poltava_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-85deg) translateX(1220px) translateY(435px);
+	width:75px;
+	height: 95px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+#Cherkasy_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-120deg) translateX(880px) translateY(1010px);
+	width:35px;
+	height: 130px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Kirovohrad_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-100deg) translateX(1280px) translateY(700px);
+	width:35px;
+	height: 160px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Mykolaiv_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-100deg) translateX(1340px) translateY(690px);
+	width:75px;
+	height: 100px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+#Odesa_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-90deg) translateX(1500px) translateY(260px);
+	width:195px;
+	height: 100px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+#Kherson_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-90deg) translateX(1630px) translateY(530px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+#Crimea_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-90deg) translateX(1630px) translateY(560px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Zaporizhzhia_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-90deg) translateX(1875px) translateY(640px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Dnipropetrivsk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 24%;
+	transform: rotate(-90deg) translateX(2065px) translateY(600px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Kharkiv_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 0%;
+	transform: rotate(-90deg) translateX(2110px) translateY(680px);
+	width:75px;
+	height: 90px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Donetsk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: 0%;
+	transform: rotate(-90deg) translateX(2110px) translateY(740px);
+	width:75px;
+	height: 80px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+#Luhansk_Region_Link_Info
+{
+	display: block;
+	position: relative;
+	top: -27%;
+	transform: rotate(-90deg) translateX(2110px) translateY(800px);
+	width:105px;
+	height: 80px;
+	border-radius: 30%;
+	margin-top: 5px;
+	margin-left: 15px;
+	margin-right: 5px;
+	padding: 5px;
+}
+
+
+h3{
+	color: blue;
+	text-align: center;
+}
